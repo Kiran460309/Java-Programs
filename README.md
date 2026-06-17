@@ -75,4 +75,3 @@ If you find this repository helpful, please give it a star ⭐ and share it with
 
 ### Keywords
 
-Java Programs, Core Java, Java Examples, Java Coding Problems, Java Practice, Java Interview Questions, Data Structures and Algorithms, OOP in Java, Java for Beginners, Java Exercises.
