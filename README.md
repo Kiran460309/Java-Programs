@@ -53,7 +53,7 @@ This repository helps beginners learn Java programming through practical example
 1. Clone the repository:
 
 ```bash
-https://github.com/Kiran460309/Java-Programs/
+https://github.com/Kiran460309/Java-Programs
 ```
 
 2. Open the project in your preferred IDE.
