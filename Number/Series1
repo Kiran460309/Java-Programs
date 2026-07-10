@@ -1,0 +1,11 @@
+public class NumberSeries1 {
+    public static void main(String[] args) {
+
+        int number = 2;
+
+        for (int i = 1; i <= 6; i++) {
+            System.out.print(number + " ");
+            number = number * 2;
+        }
+    }
+}
