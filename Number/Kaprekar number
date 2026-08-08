@@ -1,0 +1,26 @@
+import java.util.*;
+public class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long num = sc.nextLong();
+        
+        long square = num * num;
+        long temp = num;
+        long divisor = 1;
+        
+        while (temp > 0) {
+            divisor *= 10;
+            temp /= 10;
+        }
+        
+        long rightPart = square % divisor;
+        long leftPart = square / divisor;
+        if (rightPart != 0 && (leftPart + rightPart) == num) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+        
+        sc.close();
+    }
+}
