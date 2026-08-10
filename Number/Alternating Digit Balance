@@ -1,0 +1,19 @@
+import java.util.*;
+public class main{
+    public static void main(String[] args){
+        Scanner sc =  new Scanner(System.in);
+        long num = sc.nextLong();
+        evencount = 0;
+        oddcount = 0;
+        while(num>0){
+            long a = num%10;
+            if(a%2==0){
+                count++;
+            }else{
+                count++;
+            }
+            num/10;
+        }
+       System.out.println(oddcount);
+    }
+}
