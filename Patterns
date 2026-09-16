@@ -1,0 +1,143 @@
+import java.util.Scanner;
+
+public class Pattern {
+    static void Pattern0(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= row; col++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+        for (int row = 1; row <= n - 1; row++) {
+            for (int col = 1; col <= n - row; col++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+    static void Pattern1(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n; col++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+    static void Pattern2(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= row; col++) {
+                System.out.print(row + " ");
+            }
+            System.out.println("");
+        }
+    }
+    static void Pattern3(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n - row + 1; col++) {
+                System.out.print(col + " ");
+            }
+            System.out.println("");
+        }
+    }
+    static void Pattern4(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int space = 1; space <= n - row; space++) {
+                System.out.print("  ");
+            }
+            for (int col = 1; col <= 2 * row - 1; col++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+    static void Pattern5(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int space = 1; space <= row - 1; space++) {
+                System.out.print("  ");
+            }
+            for (int col = 1; col <= 2 * (n - row) + 1; col++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+    static void Pattern6(int n) {
+         for (int row = 1; row <= n; row++) {
+            for (int space = 1; space <= n - row; space++) {
+                System.out.print("  ");
+            }
+            for (int col = 1; col <= 2 * row - 1; col++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+        for (int row = 1; row <= n; row++) {
+            for (int space = 1; space <= row - 1; space++) {
+                System.out.print("  ");
+            }
+            for (int col = 1; col <= 2 * (n - row) + 1; col++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+    static void Pattern7(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= row; col++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+    static void Pattern8(int n) {
+        for (int row = 1; row <= n - 2; row++) {
+            for (int col = 1; col <= n - 2; col++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+    static void Pattern9(int n) {
+    int maxIndex = n * 2 - 2;
+    for (int row = 0; row <= maxIndex; row++) {
+        for (int col = 0; col <= maxIndex; col++) {
+            int top = row;
+            int left = col;
+            int right = maxIndex - col;
+            int bottom = maxIndex - row;
+
+            int max = Math.max(Math.max(top, bottom), Math.max(right, left));
+            System.out.print((max - n + 2) + " ");
+        } 
+        System.out.println();
+    }
+}
+
+    
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        Pattern0(a);
+        System.out.println();
+        Pattern1(a);
+        System.out.println();
+        Pattern2(a);
+        System.out.println();
+        Pattern3(a);
+        System.out.println();
+        Pattern4(a);
+        System.out.println();
+        Pattern5(a);
+        System.out.println();
+        Pattern6(a);
+        System.out.println();
+        Pattern7(a);
+        System.out.println();
+        Pattern8(a);
+        System.out.println();
+        Pattern9(a);
+        sc.close(); 
+    }
+}
