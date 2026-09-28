@@ -1,0 +1,51 @@
+public class StackUsingArray {
+	static class Stack {
+		int[] arr;
+		int top;
+		Stack(int size) {
+			arr = new int[size];
+			top =-1;
+		}
+        //push
+        void push(int value){
+            if(top==arr.length-1)
+                return;
+            top++;
+            arr[top] = value;
+        }
+        //pop
+        int pop(){
+            if(top == -1)  //Stack Underflow
+                return -1;
+            int val = arr[top];
+            top--;
+            return val; 
+        }
+        //peek
+        int peek(){
+            if (top == -1)
+                return -1;
+            return arr[top];
+        }
+        //is empty
+        boolean isEmpty(){
+            return top == -1;
+        }
+        //size
+        int size(){
+            return top+1;
+        }
+	}
+	public static void main(String args[]) {
+		Stack st = new Stack(10);
+        st.push(10);
+        st.push(20);
+        st.push(30);
+        st.push(40);
+        
+        System.out.println("Popped element: " + st.pop());
+        System.out.println("Current Stack Size: " + st.size());
+        System.out.println("Is Stack Empty? " + st.isEmpty());
+        System.out.println("Top element: " + st.peek());
+	}
+}
